@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#170b28">
+  <title>LINA — мої соцмережі</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --pink:#ff3c9d; --hot:#ff1688; --violet:#a855f7; --ink:#180b28; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; color:#fff; font-family:'Nunito',sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(255,76,177,.34), transparent 38%),
+        radial-gradient(ellipse at 90% 25%, rgba(146,64,255,.30), transparent 42%),
+        radial-gradient(ellipse at 50% 100%, rgba(255,45,144,.22), transparent 45%),
+        linear-gradient(145deg,#10091e,#241032 52%,#13091e);
+      overflow-x:hidden; display:flex; justify-content:center; padding:34px 16px;
+    }
+    body:before, body:after {
+      content:""; position:fixed; width:330px; height:330px; border-radius:50%;
+      filter:blur(85px); opacity:.22; pointer-events:none; z-index:-1;
+    }
+    body:before { background:#ff2998; top:-150px; left:-120px; }
+    body:after { background:#8b45ff; bottom:-170px; right:-120px; }
+    .wrap { width:min(100%,430px); text-align:center; }
+    .sparkles { position:fixed; inset:0; pointer-events:none; opacity:.55;
+      background-image:radial-gradient(#fff 1px,transparent 1.7px),radial-gradient(#ff9bd1 1px,transparent 1.8px);
+      background-size:83px 83px,127px 127px; background-position:10px 15px,42px 62px;
+      mask-image:linear-gradient(to bottom,black,transparent 90%);
+    }
+    .avatar-ring {
+      width:158px; height:158px; margin:8px auto 18px; padding:5px; border-radius:50%;
+      background:linear-gradient(135deg,#fff0fa,#ff42a5,#a45cff,#fff);
+      box-shadow:0 0 18px #ff3c9d99,0 0 48px #a855f755;
+      animation:float 4s ease-in-out infinite;
+    }
+    .avatar { width:100%; height:100%; display:block; object-fit:cover; object-position:center 24%; border-radius:50%; border:3px solid #2a1237; }
+    h1 { font-family:'Comfortaa',sans-serif; font-size:clamp(29px,8vw,38px); letter-spacing:5px; margin:0 0 10px; text-shadow:0 0 18px #ff4cae88; }
+    .intro { color:#f6d8ef; font-size:14px; line-height:1.65; margin:0 auto 25px; max-width:330px; }
+    .intro strong { color:#ff9bd1; }
+    .links { display:grid; gap:12px; }
+    .link {
+      display:flex; align-items:center; gap:14px; min-height:66px; padding:10px 18px;
+      color:#fff; text-decoration:none; text-align:left; border-radius:22px;
+      border:1px solid rgba(255,190,230,.28);
+      background:linear-gradient(110deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 24px rgba(0,0,0,.16);
+      backdrop-filter:blur(14px); transition:transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .link:hover { transform:translateY(-3px) scale(1.015); border-color:#ff78bf; box-shadow:0 10px 30px #ff279944; }
+    .icon {
+      flex:0 0 42px; width:42px; height:42px; display:grid; place-items:center; border-radius:50%;
+      background:linear-gradient(145deg,#ff68b6,#e51c83); box-shadow:0 0 15px #ff3c9d66;
+      font-size:20px; font-weight:900;
+    }
+    .label { display:block; font-size:16px; font-weight:800; }
+    .sub { display:block; color:#e8c9e2; font-size:11px; margin-top:1px; }
+    .donate {
+      margin-top:5px; border:0; background:linear-gradient(100deg,#ff1688,#ff4eae 55%,#bd43f6);
+      box-shadow:0 8px 28px #ff168855,inset 0 1px 0 #ffffff55;
+    }
+    .donate .icon { background:#260d2c; }
+    footer { color:#dcb6d6; font-size:11px; letter-spacing:1px; margin:25px 0 5px; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important; transition:none!important; } }
+  </style>
+</head>
+<body>
+  <div class="sparkles"></div>
+  <main class="wrap">
+    <div class="avatar-ring"><img class="avatar" src="avatar.png" alt="Аватарка"></div>
+    <h1>LUV_LINAAAA</h1>
+    <p class="intro">Привіт! 💗<br>Тут зібрані всі мої соцмережі та посилання.<br><strong>Залітай на стрім — буду рада бачити!</strong></p>
+
+    <nav class="links" aria-label="Мої посилання">
+      <!-- ЗАМІНИ посилання # на свої адреси -->
+      <a class="link" href="https://www.twitch.tv/luv_linaaaa" target="_blank" rel="noopener"><span class="icon">▶</span><span><span class="label">Twitch</span><span class="sub">Дивись мої стріми</span></span></a>
+      <a class="link" href="https://t.me/luvbalenc" target="_blank" rel="noopener"><span class="icon">➤</span><span><span class="label">Telegram</span><span class="sub">Новини та спілкування</span></span></a>
+      <a class="link" href="https://www.tiktok.com/@luv_linaaaa_" target="_blank" rel="noopener"><span class="icon">♪</span><span><span class="label">TikTok</span><span class="sub">Кліпи та короткі відео</span></span></a>
+      <a class="link donate" href="https://linatwich.donatik.ua/" target="_blank" rel="noopener"><span class="icon">♥</span><span><span class="label">Донат</span><span class="sub">Підтримай мене на стрімі 💖</span></span></a>
+    </nav>
+    <footer>✧ ДЯКУЮ, ЩО ТИ ТУТ ✧</footer>
+  </main>
+</body>
+</html>
